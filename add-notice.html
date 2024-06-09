@@ -1,0 +1,25 @@
+<!-- add-notice.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 추가</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="add-notice.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>공지사항 추가</h1>
+        <div class="content">
+            <div class="notice-form">
+                <input type="text" id="titleInput" placeholder="공지사항 제목을 입력하세요"> <!-- 공지사항 제목을 입력하는 input 필드 -->
+                <textarea id="noticeInput" placeholder="공지사항 내용을 입력하세요"></textarea>
+                <input type="text" id="authorInput" placeholder="작성자 이름을 입력하세요" />
+                <button onclick="saveNotice()">저장</button>
+                <button onclick="cancel()">취소</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
