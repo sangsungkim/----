@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,21 +12,24 @@
         <h1>강원도 감자 탐방</h1>
         <div class="content">
             <div class="buttons">
-                <button class="button">역사</button>
-                <button class="button">재배법</button>
-                <button class="button">조리법</button>
-                <button class="button">게시판</button>
+                <button class="button" onclick="location.href='history.html'">역사</button>
+                <button class="button" onclick="location.href='cultivation.html'">재배법</button>
+                <button class="button" onclick="location.href='cooking.html'">조리법</button>
+                <button class="button" onclick="location.href='board.html'">중고 거래</button>
+                <button class="button" onclick="location.href='board.html'">게시판</button>
             </div>
-            <div class="image-and-notice">
-                <img src="media/potato1.jpg" alt="강원도 감자 탐방 이미지" id="potatoImage">
-                <div class="notice-tab">
-                    <div class="notice-header">
-                        <h2>공지사항</h2>
-                        <button class="add-button" onclick="location.href='add-notice.html'">+</button>
+            <div class="main-content" id="mainContent">
+                <div class="image-and-notice">
+                    <img src="media/potato1.jpg" alt="강원도 감자 탐방 이미지" id="potatoImage">
+                    <div class="notice-tab">
+                        <div class="notice-header">
+                            <h2>공지사항</h2>
+                            <button class="add-button" onclick="location.href='add-notice.html'">+</button>
+                        </div>
+                        <ul class="notice-list" id="noticeList">
+                            <!-- 공지사항 목록이 여기서 동적으로 추가됩니다 -->
+                        </ul>
                     </div>
-                    <ul class="notice-list" id="noticeList">
-                        <!-- 공지사항 목록이 여기서 동적으로 추가됩니다 -->
-                    </ul>
                 </div>
             </div>
         </div>

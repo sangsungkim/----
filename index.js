@@ -4,14 +4,14 @@ function changeImage() {
     var currentIndex = 0;
     var imageElement = document.getElementById("potatoImage");
 
-    setInterval(function() {
+    setInterval(function () {
         currentIndex = (currentIndex + 1) % images.length;
         imageElement.src = images[currentIndex];
     }, 3000); // 3초마다 이미지 변경
 }
 
 // 페이지가 로드될 때 실행되는 함수
-window.onload = function() {
+window.onload = function () {
     changeImage();
     loadNotices();
 };
@@ -32,7 +32,7 @@ function loadNotices() {
     var noticeList = document.getElementById('noticeList');
     noticeList.innerHTML = '';
 
-    notices.forEach(function(notice, index) {
+    notices.forEach(function (notice, index) {
         var newNotice = document.createElement('li');
         newNotice.style.textAlign = "left"; // 왼쪽 정렬 설정
 
@@ -46,13 +46,13 @@ function loadNotices() {
 
         var deleteButton = document.createElement('button');
         deleteButton.textContent = "삭제";
-        deleteButton.onclick = function() {
+        deleteButton.onclick = function () {
             deleteNotice(index); // 삭제 버튼 클릭 시 해당 공지사항 삭제
         };
         newNotice.appendChild(deleteButton); // 삭제 버튼 추가
 
         newNotice.style.cursor = "pointer"; // 마우스 커서를 포인터로 변경하여 클릭 가능함을 나타냄
-        newNotice.onclick = function() {
+        newNotice.onclick = function () {
             showNoticeDetail(notice.title, notice.author, notice.date, notice.content); // 공지사항을 클릭하면 해당 내용을 보여주는 함수 호출
         };
         noticeList.appendChild(newNotice); // 공지사항 요소를 공지사항 목록에 추가
@@ -75,4 +75,9 @@ function deleteNotice(index) {
 function showNoticeDetail(title, author, date, content) {
     // URL에 매개변수로 정보를 전달하여 notice-detail.html로 이동
     window.location.href = 'notice-detail.html?title=' + encodeURIComponent(title) + '&author=' + encodeURIComponent(author) + '&date=' + encodeURIComponent(date) + '&content=' + encodeURIComponent(content);
+}
+
+// 뒤로가기 함수
+function goBack() {
+    window.history.back();
 }

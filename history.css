@@ -1,4 +1,4 @@
-/* style.css for index.html */
+/* style.css for history.html */
 
 body {
     font-family: Arial, sans-serif;
@@ -157,6 +157,19 @@ h1 {
     background-color: rgba(119, 64, 4, 1);
 }
 
-.title {
-    margin: 30px;
+/* Back button style */
+.back-button {
+    margin-top: 20px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade of primary color */
 }
