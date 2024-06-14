@@ -1,81 +1,112 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" href="style.css" />
-<title>판매글쓰기</title>
-<style>
-    table {
-        margin: auto;
-    }
-    input[type="text"] {
-        border: 1.5px rgb(68, 136, 244) solid;
-        width: 500px;
-        height: 30px;
-        border-radius: 5px;
-        padding-left: 10px;
-    }
-    textarea {
-        border: 1.5px rgb(68, 136, 244) solid;
-        width: 500px;
-        height: 400px;
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-top: 10px;
-        resize: none;
-    }
-    .header {
-        height: 30px;
-    }
-    input[type="submit"] {
-        width: 100px;
-        height: 40px;
-        font-size: 15px;
-        border: 0;
-        outline: 1.5px rgb(68, 136, 244) solid;
-        border-radius: 5px;
-        padding-left: 10px;
-        background-color: rgb(164, 199, 255);
-    }
-    input[type="submit"]:active {
-        width: 100px;
-        height: 40px;
-        font-size: 15px;
-        border: 0;
-        border-radius: 5px;
-        outline: 1.5px rgb(27, 76, 155) solid;
-        padding-left: 10px;
-        background-color: rgb(68, 136, 244);
-    }
-</style>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+    <title>판매글쓰기</title>
+    <style>
+         table {
+            margin: auto;
+        }
+
+        input[type="text"] {
+            border: 1.5px rgb(68, 136, 244) solid;
+            width: 500px;
+            height: 30px;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+
+        textarea {
+            border: 1.5px rgb(68, 136, 244) solid;
+            width: 500px;
+            height: 400px;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-top: 10px;
+            resize: none;
+        }
+
+        .header {
+            height: 30px;
+        }
+
+        .button {
+            background-color: rgba(119, 64, 4, 0.8);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 12px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgba(119, 64, 4, 1);
+        }
+    </style>
 </head>
+
 <body>
     <div id="container">
-        
-        <form action="board.html" method="post">
-            <table> 
-                <tr><td><h2>판매글쓰기</h2></td></tr>
-                <tr><td class="header">제목</td></tr>
-                <tr><td><input type="text" placeholder="제목을 입력하세요" name="title"></td></tr>
+
+        <form action="Second-Hand.html" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <h2>판매글쓰기</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="header">제목</td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="제목을 입력하세요" name="title"></td>
+                </tr>
                 <tr>
                     <td class="header">지역</td>
                 </tr>
                 <tr>
                     <td>
                         <select name="header">
-                            <option value="tech">춘천</option>
-                            <option value="life">원주</option>
-                            <option value="food">강릉</option>
-                            <option value="travel">속초</option>
-                            <option value="other">동해</option>
+                            <option value="chuncheon">춘천</option>
+                            <option value="wonju">원주</option>
+                            <option value="gangneung">강릉</option>
+                            <option value="sokcho">속초</option>
+                            <option value="donghae">동해</option>
+                            <option value="samcheok">삼척</option>
+                            <option value="taebaek">태백</option>
+                            <option value="goseong">고성</option>
+                            <option value="yanggu">양구</option>
+                            <option value="yangyang">양양</option>
+                            <option value="yeongwol">영월</option>
+                            <option value="inje">인제</option>
+                            <option value="jeongseon">정선</option>
+                            <option value="cheorwon">철원</option>
+                            <option value="pyeongchang">평창</option>
+                            <option value="hongcheon">홍천</option>
+                            <option value="hwacheon">화천</option>
+                            <option value="hoengseong">횡성</option>
                         </select>
                     </td>
                 </tr>
-                <tr><td class="header">Comment</td></tr>
-                <tr><td><textarea placeholder="내용을 입력하세요" name="detail"></textarea></td></tr>
-                <tr><td><input type="submit" value="등록" onclick="alert('작성 완료!')"></td></tr>
+                <tr>
+                    <td class="header">내용</td>
+                </tr>
+                <tr>
+                    <td><textarea placeholder="내용을 입력하세요" name="detail"></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="등록" class="button" onclick="showAlert()"></td>
+                    <td><input type="button" value="뒤로가기" class="button" onclick="goBack()"></td>
+                </tr>
+
             </table>
-            </form>
+        </form>
     </div>
 
 </body>
+
 </html>

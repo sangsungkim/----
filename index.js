@@ -72,3 +72,7 @@ function showNoticeDetail(title, author, date, content) {
 function goBack() {
     window.history.back();
 }
+
+function showAlert() {
+    alert('작성 완료!');
+}

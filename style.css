@@ -28,7 +28,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.9); 
     border: 1px solid rgba(0, 0, 0, 0.1); 
     border-radius: 5px; 
-    padding: 20px;
+    padding: 100px;
 }
 
 .image-and-notice {
@@ -147,8 +147,8 @@ h1 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 120px;
-    height: 40px;
+    width: 150px;
+    height: 60px;
 }
 
 .button:hover {

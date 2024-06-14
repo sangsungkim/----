@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
     <title>글쓰기</title>
     <style>
         table {
@@ -42,21 +43,26 @@
             background-color: rgb(164, 199, 255);
         }
 
-        input[type="submit"]:active {
-            width: 100px;
-            height: 40px;
-            font-size: 15px;
-            border: 0;
+        .button {
+            background-color: rgba(119, 64, 4, 0.8);
+            border: none;
             border-radius: 5px;
-            outline: 1.5px rgb(27, 76, 155) solid;
-            padding-left: 10px;
-            background-color: rgb(68, 136, 244);
+            color: white;
+            padding: 12px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgba(119, 64, 4, 1);
         }
     </style>
 </head>
 
 <body>
     <div id="container">
+
         <form action="board.html" method="post">
             <table>
                 <tr>
@@ -65,20 +71,22 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="header">Title</td>
+                    <td class="header">제목</td>
                 </tr>
                 <tr>
                     <td><input type="text" placeholder="제목을 입력하세요" name="title"></td>
                 </tr>
                 <tr>
-                    <td class="header">Comment</td>
+                    <td class="header">내용</td>
                 </tr>
                 <tr>
                     <td><textarea placeholder="내용을 입력하세요" name="detail"></textarea></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="등록" onclick="alert('작성 완료!')"></td>
+                    <td><input type="button" value="등록" class="button" onclick="showAlert()"></td>
+                    <td><input type="button" value="뒤로가기" class="button" onclick="goBack()"></td>
                 </tr>
+
             </table>
         </form>
     </div>
